@@ -8,13 +8,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#C84B31',
-        dark: '#191919',
-        secondary: '#2D4263',
-        light: '#ECDBBA'
+        primary: '#334155',    // slate-700
+        dark: '#0f172a',       // slate-900
+        secondary: '#475569',  // slate-600
+        light: '#f8fafc'       // slate-50
       },
       screens: {
-        '2xl' : '1320px'
+        '2xl': '1320px'
       }
     },
   },

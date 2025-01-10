@@ -1,20 +1,19 @@
-// Navbar Fixed
-window.onscroll = function () {
-  const header = document.querySelector("header");
-  const fixedNav = header.offsetTop;
+// Toggle mobile menu
+const hamburger = document.querySelector('#hamburger');
+const navMenu = document.querySelector('#nav-menu');
+const header = document.querySelector('#header');
 
-  if (window.pageYOffset > fixedNav) {
-    header.classList.add("navbar-fixed");
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('hidden');
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('bg-white/95', 'shadow-md');
+    header.classList.remove('mt-4');
   } else {
-    header.classList.remove("navbar-fixed");
+    header.classList.remove('bg-white/95', 'shadow-md');
+    header.classList.add('mt-4');
   }
-};
-
-// Hamburger
-const hamburger = document.querySelector("#hamburger");
-const navMenu = document.querySelector("#nav-menu");
-
-hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("hidden");
 });
